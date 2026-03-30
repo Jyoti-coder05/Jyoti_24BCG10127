@@ -4,7 +4,7 @@
 #  Author : Jyoti Mudalagi
 #  Reg No : 24BCG10127
 
-# -------- DIRECTORIES TO CHECK --------
+
 DIRS=("/etc" "/var/log" "/home" "/usr/bin" "/tmp")
 
 echo ""
@@ -13,7 +13,7 @@ echo "   Directory Audit Report"
 echo "=============================================="
 echo ""
 
-# -------- DIRECTORY ANALYSIS --------
+
 for DIR in "${DIRS[@]}"; do
     if [ -d "$DIR" ]; then
         
@@ -38,7 +38,7 @@ for DIR in "${DIRS[@]}"; do
     fi
 done
 
-# -------- EXTRA: CHECK GIT CONFIG DIRECTORY --------
+
 CONFIG_DIR="/etc/git"
 
 echo ""
