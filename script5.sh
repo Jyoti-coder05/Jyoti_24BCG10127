@@ -1,23 +1,36 @@
 #!/bin/bash
-# Script 5: Open Source Manifesto Generator
-# Author: JYOTI MUDALAGI | Reg No: 24BCG10127
+#  Open Source Manifesto Generator
+#  Author : Jyoti Mudalagi
+#  Reg No : 24BCG10127
 
-echo "Answer the following questions:"
+echo ""
+echo "=============================================="
+echo "   Open Source Manifesto Generator"
+echo "=============================================="
+echo ""
+
+echo "Please answer the following questions:"
 echo ""
 
 # -------- INPUT --------
-read -p "1. Tool you use daily: " TOOL
-read -p "2. Meaning of freedom: " FREEDOM
-read -p "3. What will you build: " BUILD
+read -p "1. Which tool do you use daily? : " TOOL
+read -p "2. What does 'freedom' mean to you? : " FREEDOM
+read -p "3. What do you want to build in the future? : " BUILD
 
+# -------- DATE AND OUTPUT FILE --------
 DATE=$(date '+%d %B %Y')
-OUTPUT="manifesto_riya.txt"
+OUTPUT="manifesto_jyoti.txt"
 
-# -------- CREATE FILE --------
-echo "On $DATE, I believe open source means $FREEDOM." > $OUTPUT
-echo "I regularly use $TOOL, which shows power of community." >> $OUTPUT
-echo "In future, I want to build $BUILD and share it freely." >> $OUTPUT
+# -------- CREATE MANIFESTO --------
+echo "On $DATE, I believe open source means $FREEDOM." > "$OUTPUT"
+echo "I regularly use $TOOL, which reflects the strength of community-driven development." >> "$OUTPUT"
+echo "In the future, I aim to build $BUILD and share it openly with others." >> "$OUTPUT"
 
+# -------- DISPLAY RESULT --------
 echo ""
-echo "Manifesto saved to $OUTPUT ✅"
-cat $OUTPUT
+echo "Manifesto successfully created and saved to: $OUTPUT"
+echo ""
+echo "Generated Manifesto:"
+echo "----------------------------------------------"
+cat "$OUTPUT"
+echo "----------------------------------------------"
