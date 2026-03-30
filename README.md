@@ -112,7 +112,7 @@ The generated manifesto is saved to: `manifesto_[your-username].txt` in the curr
 
 ```bash
 # Clone the repository
-git clone https://github.com/[your-username]/oss-audit-[rollnumber].git
+git clone : https://github.com/Jyoti-coder05/Jyoti_24BCG10127
 
 
 cd oss-audit-[24BCG10127]
