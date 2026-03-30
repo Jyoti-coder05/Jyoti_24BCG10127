@@ -1,11 +1,9 @@
 #!/bin/bash
-# ==========================================
 #  FOSS Package Inspector
 #  Author : Jyoti Mudalagi
 #  Reg No : 24BCG10127
-# ==========================================
 
-# -------- PACKAGE SELECTION --------
+
 PACKAGE="git"
 
 echo ""
@@ -17,7 +15,7 @@ echo ""
 echo "Checking details for package: $PACKAGE"
 echo "----------------------------------------------"
 
-# -------- CHECK INSTALLATION --------
+
 if dpkg -l | grep -q "^ii  $PACKAGE "; then
     echo "Status : Installed"
     echo ""
@@ -30,7 +28,7 @@ fi
 
 echo ""
 
-# -------- PACKAGE DESCRIPTION --------
+
 echo "Package Overview:"
 case $PACKAGE in
     git)
