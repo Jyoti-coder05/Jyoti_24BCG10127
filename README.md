@@ -38,7 +38,7 @@ chmod +x script1_system_identity.sh
 
 ---
 
-##Script 2 — FOSS Package Inspector
+#Script 2 — FOSS Package Inspector
 File: `script2_package_inspector.sh`  
 Description:Checks whether Git and related FOSS packages are installed, retrieves version info using `dpkg`, and uses a `case` statement to print a philosophy note for each package.  
 Concepts:`if-then-else`, `case` statement, `dpkg -l`, pipe with `grep`, functions, `for` loop.
@@ -51,7 +51,7 @@ chmod +x script2_package_inspector.sh
 
 ---
 
-##Script 3 — Disk and Permission Auditor
+#Script 3 — Disk and Permission Auditor
 File: `script3_disk_permission_auditor.sh`  
 Description: Loops through important system directories (`/etc`, `/var/log`, `/home`, `/usr/bin`, `/tmp`, `/usr/share/doc`) and reports permissions, owner, group, and disk usage. Also audits Git's binary and config file locations specifically.  
 Concepts: Arrays, `for` loop, `-d` directory test, `ls -ld`, `awk`, `du`, `printf` for aligned output.
