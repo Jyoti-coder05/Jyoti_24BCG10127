@@ -13,7 +13,7 @@ UPTIME=$(uptime -p)
 DATE=$(date)                          
 DISTRO=$(grep PRETTY_NAME /etc/os-release | cut -d= -f2 | tr -d '"')
 
-# -------- OUTPUT --------
+-
 echo ""
 echo "=============================================="
 echo "   Open Source System Audit Report"
