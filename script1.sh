@@ -1,25 +1,40 @@
-#!/bin/bash
-# Script 1: System Identity Report
-# Author: JYOTI MUDALAGI | Reg No: 24BCG10127
+#  System Identity Report
+#  Author : Jyoti Mudalagi
+#  Reg No : 24BCG10127
 
-# -------- VARIABLES --------
-STUDENT_NAME="JYOTI MUDALAGI"
+#  VARIABLES
+STUDENT_NAME="Jyoti Mudalagi"
 SOFTWARE_CHOICE="Git"
 
-# -------- SYSTEM INFO --------
-KERNEL=$(uname -r)                     # Kernel version
-USER_NAME=$(whoami)                   # Current user
-UPTIME=$(uptime -p)                   # System uptime
-DATE=$(date)                          # Current date
+# SYSTEM INFO 
+KERNEL=$(uname -r)                     
+USER_NAME=$(whoami)                   
+UPTIME=$(uptime -p)                   
+DATE=$(date)                          
 DISTRO=$(grep PRETTY_NAME /etc/os-release | cut -d= -f2 | tr -d '"')
 
 # -------- OUTPUT --------
-echo "=================================="
-echo " Open Source Audit — $STUDENT_NAME"
-echo "=================================="
-echo "Kernel  : $KERNEL"
-echo "User    : $USER_NAME"
-echo "Uptime  : $UPTIME"
-echo "Date    : $DATE"
-echo "Distro  : $DISTRO"
-echo "License : GNU General Public License (GPL)"
+echo ""
+echo "=============================================="
+echo "   Open Source System Audit Report"
+echo "=============================================="
+echo ""
+
+echo "Hello, $JYOTI_MUDALAGI"
+echo "Here is a summary of your system:"
+echo ""
+
+echo "Operating System   : $DISTRO"
+echo "Kernel Version     : $KERNEL"
+echo "Logged-in User     : $Jyoti_Mudalagi"
+echo "System Uptime      : $UPTIME"
+echo "Current Date & Time: $DATE"
+echo ""
+
+echo "Preferred Tool     : $SOFTWARE_CHOICE"
+echo "License            : GNU General Public License (GPL)"
+echo ""
+
+echo "=============================================="
+echo "Report Generated Successfully"
+echo "=============================================="
