@@ -1,37 +1,56 @@
 #!/bin/bash
-# Script 2: FOSS Package Inspector
-# Author:JYOTI MUDALAGI | Reg No: 24BCG10127
+# ==========================================
+#  FOSS Package Inspector
+#  Author : Jyoti Mudalagi
+#  Reg No : 24BCG10127
+# ==========================================
 
+# -------- PACKAGE SELECTION --------
 PACKAGE="git"
 
-echo "Checking package: $PACKAGE"
-echo "--------------------------"
+echo ""
+echo "=============================================="
+echo "   FOSS Package Inspection Report"
+echo "=============================================="
+echo ""
+
+echo "Checking details for package: $PACKAGE"
+echo "----------------------------------------------"
 
 # -------- CHECK INSTALLATION --------
-if dpkg -l | grep -q "$PACKAGE"; then
-    echo "$PACKAGE is installed ✅"
-    
-    # Show details
+if dpkg -l | grep -q "^ii  $PACKAGE "; then
+    echo "Status : Installed"
+    echo ""
+
+    echo "Package Information:"
     dpkg -s $PACKAGE | grep -E 'Version|Maintainer|Description'
 else
-    echo "$PACKAGE is NOT installed ❌"
+    echo "Status : Not Installed"
 fi
 
-# -------- CASE STATEMENT --------
+echo ""
+
+# -------- PACKAGE DESCRIPTION --------
+echo "Package Overview:"
 case $PACKAGE in
     git)
-        echo "Git: Distributed version control system built for open collaboration"
+        echo "Git is a distributed version control system designed for speed and collaboration."
         ;;
     firefox)
-        echo "Firefox: Open-source browser promoting privacy and open web"
+        echo "Firefox is an open-source web browser focused on privacy and performance."
         ;;
     vlc)
-        echo "VLC: Free media player that plays almost any format"
+        echo "VLC is a free and open-source media player supporting multiple formats."
         ;;
     apache2)
-        echo "Apache: One of the most widely used web servers"
+        echo "Apache is a widely used open-source web server software."
         ;;
     *)
-        echo "Unknown package"
+        echo "No description available for the selected package."
         ;;
 esac
+
+echo ""
+echo "=============================================="
+echo "Inspection Completed"
+echo "=============================================="
