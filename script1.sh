@@ -1,9 +1,9 @@
 #!/bin/bash
 # Script 1: System Identity Report
-# Author: RIYA AGRAWAL | Reg No: 24BCG10082
+# Author: JYOTI MUDALAGI | Reg No: 24BCG10127
 
 # -------- VARIABLES --------
-STUDENT_NAME="RIYA AGRAWAL"
+STUDENT_NAME="JYOTI MUDALAGI"
 SOFTWARE_CHOICE="Git"
 
 # -------- SYSTEM INFO --------
