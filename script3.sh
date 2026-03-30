@@ -1,36 +1,58 @@
 #!/bin/bash
-# Script 3: Disk and Permission Auditor
-# Author:JYOTI MUDALAGI | Reg No: 24BCG10127
 
+#  Disk and Permission Auditor
+#  Author : Jyoti Mudalagi
+#  Reg No : 24BCG10127
+
+# -------- DIRECTORIES TO CHECK --------
 DIRS=("/etc" "/var/log" "/home" "/usr/bin" "/tmp")
 
-echo "Directory Audit Report"
-echo "----------------------"
+echo ""
+echo "=============================================="
+echo "   Directory Audit Report"
+echo "=============================================="
+echo ""
 
-# -------- LOOP --------
+# -------- DIRECTORY ANALYSIS --------
 for DIR in "${DIRS[@]}"; do
     if [ -d "$DIR" ]; then
         
-        # Permissions + owner
-        PERMS=$(ls -ld $DIR | awk '{print $1, $3, $4}')
+        # Get permissions, owner, and group
+        PERMS=$(ls -ld "$DIR" | awk '{print $1}')
+        OWNER=$(ls -ld "$DIR" | awk '{print $3}')
+        GROUP=$(ls -ld "$DIR" | awk '{print $4}')
         
-        # Size
-        SIZE=$(du -sh $DIR 2>/dev/null | cut -f1)
+        # Get directory size (suppress errors)
+        SIZE=$(du -sh "$DIR" 2>/dev/null | cut -f1)
         
-        echo "$DIR => Permissions: $PERMS | Size: $SIZE"
+        echo "Directory : $DIR"
+        echo "Permissions: $PERMS"
+        echo "Owner      : $OWNER"
+        echo "Group      : $GROUP"
+        echo "Size       : $SIZE"
+        echo "----------------------------------------------"
     else
-        echo "$DIR does not exist"
+        echo "Directory : $DIR"
+        echo "Status    : Not Found"
+        echo "----------------------------------------------"
     fi
 done
 
-# -------- EXTRA: CHECK CONFIG --------
+# -------- EXTRA: CHECK GIT CONFIG DIRECTORY --------
 CONFIG_DIR="/etc/git"
 
 echo ""
-echo "Checking Git config directory..."
+echo "Checking Git configuration directory..."
+echo "----------------------------------------------"
 
 if [ -d "$CONFIG_DIR" ]; then
-    ls -ld $CONFIG_DIR
+    echo "Directory exists:"
+    ls -ld "$CONFIG_DIR"
 else
-    echo "Git config directory not found"
+    echo "Git configuration directory not found"
 fi
+
+echo ""
+echo "=============================================="
+echo "Audit Completed"
+echo "=============================================="
