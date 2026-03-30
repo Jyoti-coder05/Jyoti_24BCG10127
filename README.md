@@ -130,7 +130,7 @@ chmod +x *.sh
 
 #Project Report
 
-The full project report (12–16 pages) is submitted as a PDF on the VITyarthi portal. It covers:
+The full project report (15 pages) is submitted as a PDF on the VITyarthi portal. It covers:
 
 - Part A: Origin story of Git, GPL v2 licence analysis, and ethical reflection on open source
 - Part B: Git's Linux footprint — directories, permissions, service management
