@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script 2: FOSS Package Inspector
-# Author: RIYA AGRAWAL | Reg No: 24BCG10082
+# Author:JYOTI MUDALAGI | Reg No: 24BCG10127
 
 PACKAGE="git"
 
