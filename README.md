@@ -139,11 +139,3 @@ The full project report (15 pages) is submitted as a PDF on the VITyarthi portal
 - Part C: FOSS ecosystem — dependencies, GitHub, governance model
 - Part D: Open source vs proprietary comparison table and verdict
 
-# References
-
-- GNU Project — Free Software Definition: https://gnu.org/philosophy/free-sw.html
-- Open Source Initiative: https://opensource.org/osd
-- Git Official Documentation: https://git-scm.com/doc
-- GPL v2 Full Text: https://gnu.org/licenses/old-licenses/gpl-2.0.html
-- Eric S. Raymond — The Cathedral and the Bazaar: http://catb.org/~esr/writings/cathedral-bazaar
-- The Linux Command Line (William Shotts): https://linuxcommand.org
